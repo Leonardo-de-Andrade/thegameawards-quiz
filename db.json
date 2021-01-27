@@ -1,5 +1,5 @@
 {
-    "bg": "https://fextralife.com/wp-content/uploads/2017/11/the-game-awards-2017-logo-promotional-video-trailer.png",
+    "bg": "https://images.hdqwalls.com/wallpapers/ellie-the-last-of-us-4k-yl.jpg",
     "title": "Quiz CSS da Alura",
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [
@@ -31,8 +31,8 @@
     ],
     "theme": {
       "colors": {
-        "primary": "#e64a19",
-        "secondary": "#e64a19",
+        "primary": "#1b5e20",
+        "secondary": "#852508",
         "mainBg": "#171B35",
         "contrastText": "#FFFFFF",
         "wrong": "#FF5722",
