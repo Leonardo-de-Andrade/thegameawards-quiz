@@ -1,28 +1,30 @@
 {
     "bg": "https://images.hdqwalls.com/wallpapers/ellie-the-last-of-us-4k-yl.jpg",
-    "title": "Quiz CSS da Alura",
+    "title": "The Game Awards Quiz",
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
+        "image": "https://thumbs.gfycat.com/RewardingHighHogget-size_restricted.gif",
+        "title": "Qual destes foi o vencedor, no ano de 2019, na categoria de melhor direção?",
+        "description": "",
         "answer": 2,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Sekiro: Shadows Die Twice",
+          "Resident Evil 2",
+          "Death Stranding",
+          "Outer Wilds"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
-        "answer": 0,
+        "image": "https://th.bing.com/th/id/R887eab6313027e374eaa8eefdb40e3a0?rik=GE0mcZSy4kcWWw&riu=http%3a%2f%2fcdn02.nintendo-europe.com%2fmedia%2fimages%2f08_content_images%2fgames_6%2fwiiu_download_software_4%2fwiiuds_hollowknight%2fCI_WiiUDS_HollowKnight_SymphonyOfTheKnight.gif&ehk=Pq7xbY9zzKMcSjg9SJhZPxDoPn63d1LebVzpOhsrY2s%3d&risl=1&pid=ImgRaw",
+        "title": "O vencedor do premio de melhor jogo independente do ano 2014 é?",
+        "description": "",
+        "answer": 1,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "Undertale",
+           "Shovel Knight",
+           "Journey",
+           "Celeste"
         ]
       }
     ],
@@ -41,3 +43,4 @@
       "borderRadius": "4px"
     }
   }
+

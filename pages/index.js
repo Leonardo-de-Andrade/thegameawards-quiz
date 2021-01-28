@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Head>
-        <title>The Game Awards Quiz</title>
+        <title> {db.title} </title>
       </Head>
       <QuizContainer>
         <Widget>

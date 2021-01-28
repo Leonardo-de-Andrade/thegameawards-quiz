@@ -33,9 +33,10 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="file:///C:/Users/L/Desktop/imersao-react/thegameawardsquiz/favicon.ico" />
+        <link rel="shortcut icon" href="https://www.shareicon.net/data/512x512/2016/12/19/863777_win_512x512.png" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+        <title> {db.title} </title>
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
