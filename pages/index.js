@@ -19,7 +19,6 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Head>
-        <title> {db.title} </title>
       </Head>
       <QuizContainer>
         <Widget>
@@ -27,6 +26,7 @@ export default function Home() {
             <h1>The Game Awards</h1>
           </Widget.Header>
           <Widget.Content>
+          <p>{db.description}</p>
             <form onSubmit={function(event) {
              event.preventDefault();
              router.push(`/quiz?name=${name}`);
@@ -35,7 +35,7 @@ export default function Home() {
               <Input 
               name="nomeDoUsuario"
               onChange={(event) => setName(event.target.value)}
-              placeholder="Digite seu Nome" 
+              placeholder="Digite seu Nickname" 
               value={name}
               />
               <Button type="submit" disabled={name.length === 0}>
@@ -46,9 +46,6 @@ export default function Home() {
         </Widget>
         <Widget>
           <Widget.Content>
-            <h1>Outros Quizes</h1>
-
-            <p>dale</p>
           </Widget.Content>
         </Widget>
         <Footer />

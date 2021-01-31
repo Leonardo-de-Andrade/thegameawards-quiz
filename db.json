@@ -1,7 +1,7 @@
 {
     "bg": "https://images.hdqwalls.com/wallpapers/ellie-the-last-of-us-4k-yl.jpg",
     "title": "The Game Awards Quiz",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "description": "Prove agora que manja da grande cerimônia de premiação anual, achas que está preparado?",
     "questions": [
       {
         "image": "https://thumbs.gfycat.com/RewardingHighHogget-size_restricted.gif",
@@ -16,8 +16,8 @@
         ]
       },
       {
-        "image": "https://th.bing.com/th/id/R887eab6313027e374eaa8eefdb40e3a0?rik=GE0mcZSy4kcWWw&riu=http%3a%2f%2fcdn02.nintendo-europe.com%2fmedia%2fimages%2f08_content_images%2fgames_6%2fwiiu_download_software_4%2fwiiuds_hollowknight%2fCI_WiiUDS_HollowKnight_SymphonyOfTheKnight.gif&ehk=Pq7xbY9zzKMcSjg9SJhZPxDoPn63d1LebVzpOhsrY2s%3d&risl=1&pid=ImgRaw",
-        "title": "O vencedor do premio de melhor jogo independente do ano 2014 é?",
+        "image": "https://cdn.atomix.vg/wp-content/uploads/2016/05/7c246fd897d163aacc14e8b945a2edac.gif",
+        "title": "O vencedor do prêmio de melhor jogo independente do ano 2014 é?",
         "description": "",
         "answer": 1,
         "alternatives": [
@@ -25,6 +25,18 @@
            "Shovel Knight",
            "Journey",
            "Celeste"
+        ]
+      },
+      {
+      "image": "https://64.media.tumblr.com/01d3df3dae6cc95f559d9866f8048d15/b02cf88027c16f3b-70/s640x960/4cbd7b9ca23d2e695109ef2099ea2d81cf63122a.gif",
+        "title": "Qual destes foi eleito o melhor jogo de 2015?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+           "Dragon Age: Inquisition",
+           "Overwatch",
+           "The Witcher 3: Wild Hunt",
+           "Bloodborne"
         ]
       }
     ],
@@ -36,6 +48,7 @@
         "primary": "#1b5e20",
         "secondary": "#8B4513",
         "mainBg": "#171B35",
+        "gitHubColor": "#228B22",
         "contrastText": "#FFFFFF",
         "wrong": "#FF5722",
         "success": "#4CAF50"

@@ -31,8 +31,8 @@ export default function Footer(props) {
         <img src="https://i2.wp.com/www.multarte.com.br/wp-content/uploads/2019/03/logo-instagram-png-fundo-transparente13.png?fit=2400,2400&ssl=1" alt="Logo Instagram" />
       </a>
       <p>
-        Quiz feito inteiramente com React, Instagram para contato
-      </p>
+        Para mais informações me chama no Instagram 
+      </p>  
     </FooterWrapper>
   );
 }
