@@ -1,12 +1,50 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
 import Button from '../src/components/Button';
 import AlternativesForm from '../src/components/AlternativesForm';
+import Lottie from 'react-lottie';
+import loadingAnimation from './../src/animations/loading.json';
+import checkAnimation from './../src/animations/check.json';
+import errorAnimation from './../src/animations/error.json';
+
+function returnResponse(index) {
+  if ((index + 1) === 1) {
+    return " a resposta correta é Death Stranding";
+  } else if ((index + 1) === 2) {
+    return " a resposta correta é Shovel Knight";
+  } else if ((index + 1) === 3) {
+    return " a resposta correta é The Witcher 3";
+  } else if ((index + 1) === 4) {
+    return " a resposta correta é Final Fantasy VII";
+  } else if ((index + 1) === 5) {
+    return " a resposta correta é God of War";
+  } else if ((index + 1) === 6) {
+    return " a resposta correta é 2014";
+  } else if ((index + 1) === 7) {
+    return " a resposta correta é Cuphead";
+  } else {
+    return " a resposta correta é Nintendo";
+  }
+}
+
 
 function LoadingWidget() {
+  const [animationState, setAnimationState] = React.useState({
+    isStopped: false, isPaused: false
+  });
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: loadingAnimation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
+
   return (
     <Widget>
       <Widget.Header>
@@ -14,34 +52,46 @@ function LoadingWidget() {
       </Widget.Header>
 
       <Widget.Content>
-        [Desafio do Loading]
+        <Lottie options={defaultOptions}
+          height={400}
+          width={400}
+          isStopped={animationState.isStopped}
+          isPaused={animationState.isPaused}
+        />
       </Widget.Content>
     </Widget>
   );
 }
 
 function ResultWidget({ results }) {
+  const router = useRouter();
+  const validCount = results.filter((x) => x).length;
+  var message = '';
+
   return (
     <Widget>
       <Widget.Header>
-        Resultado
+        <h1>Resultado</h1>
       </Widget.Header>
 
       <Widget.Content>
-        <p>Você acertou
+        <h3>{`Parabéns, ${router.query.name || 'Usuário'}`}</h3>
+        <p>
+          Você acertou
           {' '}
-          {results.reduce((somatoriaAtual, resultAtual) => {
-            return resultAtual ? somatoriaAtual + 1 : somatoriaAtual;
-          }, 0)}
+          {validCount}
           {' '}
-          perguntas
+          {validCount === 1 ? 'pergunta' : 'perguntas'}
+          {' '}
         </p>
         <ul>
           {results.map((result, index) => (
-            <li key={`result__${result}`}>
-              {index + 1})
-              {' '}  
-              {result === true ? ' Acertou' : ' Errou'}
+            <li key={`result__${result}`} >
+              {index + 1}
+              {')'}
+              {result === true ? ' Boa,' : ' Errou,'}
+              {returnResponse(index)}
+              {' '}
             </li>
           ))}
         </ul>
@@ -62,11 +112,30 @@ function QuestionWidget({
   const questionId = `question__${questionIndex}`;
   const isCorrect = selectedAlternative === question.answer;
   const hasAlternativeSelected = selectedAlternative !== undefined;
+  const [animationState, setAnimationState] = React.useState({
+    isStopped: false, isPaused: false
+  });
+
+  const checkOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: checkAnimation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
+  const errorOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: errorAnimation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
 
   return (
     <Widget>
       <Widget.Header>
-   {/*      <BackLinkArrow href="/" /> */}
         <h3>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>
@@ -86,12 +155,12 @@ function QuestionWidget({
           {question.title}
         </h2>
         <p>
-          {question.description}
+          {' '}
         </p>
 
         <AlternativesForm
-          onSubmit={(infosDoEvento) => {
-            infosDoEvento.preventDefault();
+          onSubmit={(event) => {
+            event.preventDefault();
             setIsQuestionSubmited(true);
             setTimeout(() => {
               addResult(isCorrect);
@@ -103,9 +172,10 @@ function QuestionWidget({
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
             const alternativeId = `alternative__${alternativeIndex}`;
-            const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR';
+            const alternativeStatus = isCorrect ? 'SUCESS' : 'ERROR';
             const isSelected = selectedAlternative === alternativeIndex;
             return (
+
               <Widget.Topic
                 as="label"
                 key={alternativeId}
@@ -117,8 +187,9 @@ function QuestionWidget({
                   style={{ display: 'none' }}
                   id={alternativeId}
                   name={questionId}
-                  onChange={() => setSelectedAlternative(alternativeIndex)}
                   type="radio"
+                  onChange={() => setSelectedAlternative(alternativeIndex)}
+                  checked={isSelected}
                 />
                 {alternative}
               </Widget.Topic>
@@ -128,8 +199,23 @@ function QuestionWidget({
           <Button type="submit" disabled={!hasAlternativeSelected}>
             Confirmar
           </Button>
-          {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
-          {isQuestionSubmited && !isCorrect && <p>Você errou!</p>}
+          {isQuestionSubmited && isCorrect &&
+            <p>
+              <Lottie options={checkOptions}
+                height={80}
+                width={80}
+                isStopped={animationState.isStopped}
+                isPaused={animationState.isPaused}
+              />
+            </p>}
+          {isQuestionSubmited && !isCorrect && <p>
+            <Lottie options={errorOptions}
+              height={30}
+              width={30}
+              isStopped={animationState.isStopped}
+              isPaused={animationState.isPaused}
+            />
+          </p>}
         </AlternativesForm>
       </Widget.Content>
     </Widget>
@@ -155,21 +241,19 @@ export default function QuizPage() {
       result,
     ]);
   }
-  
+
 
   React.useEffect(() => {
     setTimeout(() => {
-       setScreenState(screenStates.QUIZ);
+      setScreenState(screenStates.QUIZ);
     }, 1 * 1000);
   }, []);
 
   function handleSubmitQuiz() {
     const nextQuestion = questionIndex + 1;
-    if (nextQuestion < totalQuestions) {
-      setCurrentQuestion(nextQuestion);
-    } else {
-      setScreenState(screenStates.RESULT);
-    }
+    nextQuestion < totalQuestions
+      ? setCurrentQuestion(nextQuestion)
+      : setScreenState(screenStates.RESULT);
   }
 
   return (

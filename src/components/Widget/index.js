@@ -14,7 +14,7 @@ const Widget = styled.div`
     margin-bottom: 0;
   }
   p {
-    font-size: 14px;
+    font-size: 14x;
     font-weight: 400;
     line-height: 1;
   }
@@ -43,6 +43,9 @@ Widget.Content = styled.div`
   ul {
     list-style: none;
     padding: 0;
+  }
+  li {
+    font-size: 14px;
   }
 `;
 

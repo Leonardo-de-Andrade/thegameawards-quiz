@@ -38,10 +38,71 @@
            "The Witcher 3: Wild Hunt",
            "Bloodborne"
         ]
-      }
+      },
+      {
+        "image": "https://38.media.tumblr.com/273f3ff75dba38aaeb34e45650942534/tumblr_nj3rhfQfec1u8nr7vo1_500.gif",
+          "title": "Qual jogo foi eleito ou melhor RPG no ano de 2020?",
+          "description": "",
+          "answer": 3,
+          "alternatives": [
+             "Wasteland 3",
+             "Genshin Impact",
+             "Persona 5 Royal",
+             "Final Fantasy VII Remake"
+          ]
+        },
+        {
+          "image": "https://66.media.tumblr.com/261ba631bf539dbcaa54a7f07af9ce21/tumblr_pfxf68eccy1w7oo05o6_500.gifv",
+            "title": "Em 2018, na categoria de melhor direção, qual destes foi o premiado?",
+            "description": "",
+            "answer": 1,
+            "alternatives": [
+               "Detroit: Become Human",
+               "God of War",
+               "Marvel’s Spider-Man",
+               "Red Dead Redemption 2"
+            ]
+          },
+          {
+            "image": "https://tse1.mm.bing.net/th/id/OIP.e8m21ADjlRfggRCyelqLVAHaEK?pid=Api&rs=1",
+              "title": "Em que ano foi criado a primiação The Game Awards?",
+              "description": "",
+              "answer": 3,
+              "alternatives": [
+                 "2011",
+                 "2012",
+                 "2013",
+                 "2014"
+              ]
+            },
+            {
+              "image": "https://64.media.tumblr.com/b0326c07be53254276eb4dbaa25ad5a7/26537d6379438334-6a/s500x750/89ef5a8e464a086c62d9f7a94eda75ab9ae59801.gifv",
+                "title": "Qual foi o melhor estreia indie de 2018?",
+                "description": "",
+                "answer": 2,
+                "alternatives": [
+                   "Golf Story",
+                   "Hollow Knight",
+                   "Cuphead",
+                   "Slime Rancher"
+                ]
+              },
+              {
+                "image": "https://ardas-it.com/uploads/images/blogs/giph.gif",
+                  "title": "Qual foi a melhor desenvolvedora do ano de 2014?",
+                  "description": "",
+                  "answer": 2,
+                  "alternatives": [
+                     "Blizzard",
+                     "Telltale Games",
+                     "Nintendo",
+                     "Ubisoft Montreal"
+                  ]
+                }
     ],
     "external": [
-      ""
+      "https://aluraquiz.alnun.vercel.app/",
+      "https://avengersquiz.penadev.vercel.app/"
     ],
     "theme": {
       "colors": {
