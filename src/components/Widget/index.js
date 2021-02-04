@@ -47,6 +47,9 @@ Widget.Content = styled.div`
   li {
     font-size: 14px;
   }
+  p {
+    font-size: 14px;
+  }
 `;
 
 Widget.Topic = styled.a`
