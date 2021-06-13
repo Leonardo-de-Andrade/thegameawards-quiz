@@ -27,7 +27,7 @@ const FooterWrapper = styled.footer`
 export default function Footer(props) {
   return (
     <FooterWrapper {...props}>
-      <a href="https://www.instagram.com/_leonardo_andrade_/" target="_blank">
+      <a href="https://www.instagram.com/_leonardo_andrade_" target="_blank">
         <img src="https://i2.wp.com/www.multarte.com.br/wp-content/uploads/2019/03/logo-instagram-png-fundo-transparente13.png?fit=2400,2400&ssl=1" alt="Logo Instagram" />
       </a>
       <p>
