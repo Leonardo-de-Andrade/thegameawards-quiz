@@ -96,7 +96,7 @@ export default function Home() {
           animate="show"
         />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/Leozardd/thegameawards-quiz" />
+      <GitHubCorner projectUrl="https://github.com/leonardo-de-andrade/thegameawards-quiz" />
     </QuizBackground>
   );
 }
